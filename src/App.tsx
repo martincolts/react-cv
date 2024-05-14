@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Page, Document, StyleSheet, Font } from '@react-pdf/renderer';
+import { Header } from './Header';
+import { Body } from './Body';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
-export default App;
+Font.register({ family: 'Roboto', src: 'http://fonts.gstatic.com/s/roboto/v16/zN7GBFwfMP4uA6AR0HCoLQ.ttf' });
+
+const styles = StyleSheet.create({
+  page: {
+    flexDirection: 'column',
+    backgroundColor: '#FFF',
+    fontFamily: 'Roboto',
+  }
+});
+
+export const MyDocument = () => (
+  <Document>
+    <Page size="A4" style={styles.page}>
+      <Header></Header>
+      <Body></Body>
+    </Page>
+  </Document>
+);
