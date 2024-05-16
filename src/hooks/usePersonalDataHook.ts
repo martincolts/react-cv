@@ -1,4 +1,4 @@
-import { PersonalData, data } from "./data"
+import { PersonalData, data } from "../data"
 
 export const usePersonalDataHook = (): PersonalData => {
     return data.personalData

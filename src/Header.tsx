@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from "@react-pdf/renderer";
 import * as React from "react";
-import { usePersonalDataHook } from "./useDataHook";
+import { usePersonalDataHook } from "./hooks/usePersonalDataHook";
 import { Phone } from "./icons/phone";
 import { Address } from "./icons/address";
 import { LinkedIn } from "./icons/linkedin";
@@ -9,7 +9,7 @@ import { Url } from "./icons/url";
 
 const styles = StyleSheet.create({
   body: {
-    margin: 10,
+    margin: 5,
     flexGrow: 0.09,
     borderRadius: "20px",
     flexDirection: "row",
@@ -23,8 +23,7 @@ const styles = StyleSheet.create({
     flexGrow: 0.4,
     fontSize: 10,
     backgroundColor: "#a13108",
-    borderTopRightRadius: "20px",
-    borderBottomRightRadius: "20px",
+    borderRadius: '5px',
     width: "10%",
     padding: 10,
     color: "white",
